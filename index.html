@@ -1,0 +1,48 @@
+<!-- File: index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harrison Myler Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Splash Screen -->
+  <div id="splash">
+    <div class="splash-content">
+      <h1>Welcome</h1>
+      <button id="enter-btn">Enter</button>
+    </div>
+  </div>
+
+  <!-- Site Content -->
+  <div id="site-content" class="hidden">
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="private.html">Private</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <main id="portfolio">
+      <section class="project reveal">
+        <h2>Project One</h2>
+        <p>A brief description of project one with some details.</p>
+      </section>
+      <section class="project reveal">
+        <h2>Project Two</h2>
+        <p>A brief description of project two with some details.</p>
+      </section>
+      <!-- Add more .project sections -->
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -5,31 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Private Login</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <ul class="nav-list">
-      <li><a href="index.html">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="private.html" class="active">Private</a></li>
-    </ul>
-    <button class="hamburger" id="hamburger">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-
-  <main id="login" class="fade-in">
-    <h1>Login</h1>
-    <form>
-      <label for="user">Username</label>
-      <input type="text" id="user" name="user">
-      <label for="pass">Password</label>
-      <input type="password" id="pass" name="pass">
-      <button type="submit">Log In</button>
-    </form>
-  </main>
+  <!-- Modal Overlay for ChatGPT-like login -->
+  <div class="modal-overlay">
+    <div class="login-container">
+      <h1>Member Login</h1>
+      <form>
+        <label for="user">Username</label>
+        <input type="text" id="user" name="user" placeholder="Your username">
+        <label for="pass">Password</label>
+        <input type="password" id="pass" name="pass" placeholder="••••••">
+        <button type="submit" class="login-button">Log In</button>
+      </form>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

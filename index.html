@@ -5,43 +5,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Harrison Myler Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Splash Screen -->
   <div id="splash">
     <div class="splash-content">
-      <h1>Welcome</h1>
-      <button id="enter-btn">Enter</button>
+      <h1 class="splash-title">Harrison Myler</h1>
+      <p class="splash-subtitle">A creative journey through code & design</p>
+      <button id="enter-btn">Enter Portfolio</button>
     </div>
   </div>
 
   <!-- Site Content -->
-  <div id="site-content" class="hidden">
-    <nav>
+  <header id="header" class="hidden">
+    <nav class="navbar">
+      <div class="logo">HM</div>
       <ul class="nav-list">
         <li><a href="index.html">Portfolio</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="private.html">Private</a></li>
       </ul>
-      <button class="hamburger" id="hamburger">
+      <div class="hamburger" id="hamburger">
         <span></span><span></span><span></span>
-      </button>
+      </div>
     </nav>
+  </header>
 
-    <main id="portfolio">
-      <section class="project reveal">
+  <main id="portfolio" class="hidden">
+    <section class="projects">
+      <article class="project-card reveal">
         <h2>Project One</h2>
-        <p>A brief description of project one with some details.</p>
-      </section>
-      <section class="project reveal">
+        <p>Detailing the first amazing work.</p>
+      </article>
+      <article class="project-card reveal">
         <h2>Project Two</h2>
-        <p>A brief description of project two with some details.</p>
-      </section>
-      <!-- Add more .project sections -->
-    </main>
-  </div>
+        <p>Another highlight from my portfolio.</p>
+      </article>
+      <!-- Add more .project-card -->
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>

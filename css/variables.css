@@ -1,0 +1,8 @@
+:root {
+  --clr-primary: #1a1a1a;
+  --clr-secondary: #ff6b6b;
+  --clr-light: #f4f4f4;
+  --font-sans: 'Open Sans', sans-serif;
+  --font-display: 'Montserrat', sans-serif;
+  --transition-fast: 0.3s ease;
+}

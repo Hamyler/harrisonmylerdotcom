@@ -4,25 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Private Login</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Private access for Harrison Myler">
+  <title>Private Access | Harrison Myler</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
-  <!-- Modal Overlay for ChatGPT-like login -->
   <div class="modal-overlay">
-    <div class="login-container">
-      <h1>Member Login</h1>
-      <form>
+    <div class="login-modal container fade-in">
+      <h2 class="modal-title">Private Member Login</h2>
+      <form id="login-form" class="form-group" novalidate>
         <label for="user">Username</label>
-        <input type="text" id="user" name="user" placeholder="Your username">
+        <input type="text" id="user" name="user" required>
+        <span class="error">Required</span>
+
         <label for="pass">Password</label>
-        <input type="password" id="pass" name="pass" placeholder="••••••">
-        <button type="submit" class="login-button">Log In</button>
+        <input type="password" id="pass" name="pass" required>
+        <span class="error">Required</span>
+
+        <button type="submit" class="btn-modal">Log In</button>
       </form>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script defer src="js/script.js"></script>
 </body>
 </html>

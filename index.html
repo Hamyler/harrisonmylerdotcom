@@ -4,49 +4,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harrison Myler Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Portfolio of Harrison Myler - Developer & Designer">
+  <title>Harrison Myler | Portfolio</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <script defer src="js/script.js"></script>
 </head>
-<body>
-  <!-- Splash Screen -->
-  <div id="splash">
-    <div class="splash-content">
-      <h1 class="splash-title">Harrison Myler</h1>
-      <p class="splash-subtitle">A creative journey through code & design</p>
-      <button id="enter-btn">Enter Portfolio</button>
+<body class="preload">
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner">
+      <div></div><div></div><div></div><div></div>
     </div>
   </div>
 
-  <!-- Site Content -->
-  <header id="header" class="hidden">
-    <nav class="navbar">
-      <div class="logo">HM</div>
+  <!-- Splash -->
+  <section id="splash" class="splash full-screen">
+    <div class="splash-inner">
+      <h1 class="display">Harrison Myler</h1>
+      <p class="subdisplay">Crafting elegant solutions in code & design</p>
+      <button class="btn btn-primary" id="enter-btn">Enter Site</button>
+    </div>
+    <svg class="splash-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,224L1440,32L1440,320L0,320Z"></path></svg>
+  </section>
+
+  <!-- Header / Nav -->
+  <header id="header" class="sticky">
+    <nav class="navbar container">
+      <a href="#splash" class="logo">HM</a>
       <ul class="nav-list">
-        <li><a href="index.html">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="private.html">Private</a></li>
       </ul>
-      <div class="hamburger" id="hamburger">
+      <button class="nav-toggle" aria-label="toggle navigation">
         <span></span><span></span><span></span>
-      </div>
+      </button>
     </nav>
   </header>
 
-  <main id="portfolio" class="hidden">
-    <section class="projects">
-      <article class="project-card reveal">
-        <h2>Project One</h2>
-        <p>Detailing the first amazing work.</p>
-      </article>
-      <article class="project-card reveal">
-        <h2>Project Two</h2>
-        <p>Another highlight from my portfolio.</p>
-      </article>
-      <!-- Add more .project-card -->
-    </section>
-  </main>
+  <!-- About Section -->
+  <section id="about" class="section container fade-in">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+      <img src="assets/profile.jpg" alt="Harrison Myler" class="avatar">
+      <div class="bio">
+        <p>Hi, I'm Harrison—a full-stack developer and designer based in Massachusetts. I specialize in building responsive websites, intuitive UI/UX, and efficient backend services.</p>
+        <ul class="skills">
+          <li>HTML5 & CSS3</li>
+          <li>JavaScript (ES6+)</li>
+          <li>Node.js & Express</li>
+          <li>React & Vue</li>
+          <li>UX/UI Prototyping</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- Projects Section -->
+  <section id="projects" class="section container fade-in delay-1">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="filter-controls">
+      <button data-filter="all" class="filter-btn active">All</button>
+      <button data-filter="web" class="filter-btn">Web</button>
+      <button data-filter="design" class="filter-btn">Design</button>
+      <button data-filter="cli" class="filter-btn">CLI</button>
+    </div>
+    <div class="projects-grid">
+      <article class="project-card" data-category="web">
+        <h3>Responsive Landing Page</h3>
+        <p>Scalable landing page with custom animations and performance optimizations.</p>
+        <a href="#" class="btn btn-outline">View Live</a>
+      </article>
+      <article class="project-card" data-category="design">
+        <h3>Brand Identity Kit</h3>
+        <p>Complete branding package with logos, color palettes, and guidelines.</p>
+        <a href="#" class="btn btn-outline">Download Assets</a>
+      </article>
+      <article class="project-card" data-category="cli">
+        <h3>Task Runner CLI</h3>
+        <p>Customizable command-line tool for automating development workflows.</p>
+        <a href="#" class="btn btn-outline">GitHub Repo</a>
+      </article>
+      <!-- More project cards... -->
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="section container fade-in delay-2">
+    <h2 class="section-title">Latest Articles</h2>
+    <div class="blog-grid">
+      <article class="blog-card">
+        <img src="assets/blog1.jpg" alt="Post 1">
+        <h3>Optimizing Web Performance</h3>
+        <p>Best practices for reducing load times and improving user experience.</p>
+        <a href="#" class="read-more">Read More</a>
+      </article>
+      <article class="blog-card">
+        <img src="assets/blog2.jpg" alt="Post 2">
+        <h3>Design Systems 101</h3>
+        <p>Building reusable components and style guides for consistency.</p>
+        <a href="#" class="read-more">Read More</a>
+      </article>
+      <!-- Additional blog posts -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">HM</div>
+      <ul class="footer-socials">
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">GitHub</a></li>
+      </ul>
+      <p>&copy; 2025 Harrison Myler. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,4 @@
+.container { width: min(90%, 1200px); margin-inline: auto; }
+.section { padding-block: 4rem; }
+.full-screen { height: 100vh; }
+.sticky { position: sticky; top: 0; z-index: 1000; }

@@ -4,35 +4,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Harrison Myler</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Contact Harrison Myler">
+  <title>Contact | Harrison Myler</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
-  <header id="header">
-    <nav class="navbar">
-      <div class="logo">HM</div>
+  <header class="sticky">
+    <nav class="navbar container">
+      <a href="index.html" class="logo">HM</a>
       <ul class="nav-list">
-        <li><a href="index.html">Portfolio</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#contact" class="active">Contact</a></li>
         <li><a href="private.html">Private</a></li>
       </ul>
-      <div class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
-      </div>
+      <button class="nav-toggle"><span></span><span></span><span></span></button>
     </nav>
   </header>
 
-  <main id="contact" class="page-content fade-in">
-    <h1>Let's Connect</h1>
-    <p>Email me at <a href="mailto:you@example.com">you@example.com</a></p>
-    <div class="socials">
-      <a href="#" class="social-button">Twitter</a>
-      <a href="#" class="social-button">LinkedIn</a>
-      <a href="#" class="social-button">GitHub</a>
-    </div>
+  <main id="contact" class="section container fade-in">
+    <h2 class="section-title">Get In Touch</h2>
+    <form id="contact-form" class="contact-form" novalidate>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <span class="error">Please enter your name</span>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error">Valid email required</span>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <span class="error">Please enter a message</span>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+      <p id="form-status" class="form-status"></p>
+    </form>
+
+    <section class="map">
+      <!-- Embed Google Map iframe -->
+      <iframe src="https://www.google.com/maps/embed?..." allowfullscreen></iframe>
+    </section>
   </main>
 
-  <script src="script.js"></script>
+  <script defer src="js/script.js"></script>
 </body>
 </html>
